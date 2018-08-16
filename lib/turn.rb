@@ -14,7 +14,7 @@ new_user_input = new_user_input - 1
 return new_user_input
 end
 
-def move(board, index, value = gets.strip)
+def move(board, index, value = "X")
 board[index] = value
 return board
 end
@@ -30,7 +30,6 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
-  puts "Please enter X or O:"
   index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index)
